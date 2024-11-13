@@ -24,7 +24,7 @@ export default function Projects() {
             <p className="text-gray-400 mb-4">
               Ecommerce website using Reactjs&#44; Firebase&#44; Tailwind Css&#44; DummyJson API
             </p>
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
               <Link
                 href="https://github.com/mustafaaly7/Ecommerce-demo"
                 target="_blank"
@@ -60,7 +60,7 @@ export default function Projects() {
             <p className="text-gray-400 mb-4">
               Blog App using HTML&#44; CSS&#44; Firebase&#44; JavaScript. Full responsive with public and private routes.
             </p>
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
               <Link href="https://github.com/mustafaaly7/17-aug-2024-blogweb" target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
                   <GithubOutlined />
@@ -90,7 +90,7 @@ export default function Projects() {
             <p className="text-gray-400 mb-4">
             Weather App using Reactjs&#44; Firebase&#44; Tailwind Css&#44; One Weather API
             </p>
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
               <Link href="https://github.com/mustafaaly7/Weather-App-React-js" target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
                   <GithubOutlined />
@@ -118,7 +118,7 @@ export default function Projects() {
             <p className="text-gray-400 mb-4">
               Used Html&#44; css&#44; Javascript&#44; and Speech synthesis functions to recognize voice and act accordingly.
             </p>
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
               <Link href="https://github.com/mustafaaly7/virtual-assistant-on-js" target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
                   <GithubOutlined />
