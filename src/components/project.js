@@ -36,7 +36,7 @@ export default function Projects() {
                 </button>
               </Link>
               <Link href="https://ecommerce-demo-self.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <button className="bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
+                <button className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
                   Live Demo
                 </button>
               </Link>
@@ -68,7 +68,7 @@ export default function Projects() {
                 </button>
               </Link>
               <Link href="https://blogweb-app-mauve.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <button className="bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
+                <button className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
                   Live Demo
                 </button>
               </Link>
@@ -97,7 +97,7 @@ export default function Projects() {
                   <span>View on GitHub</span>
                 </button>
               </Link>
-              <Link href="https://weather-app-react-js-inky.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
+              <Link href="https://weather-app-react-js-inky.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
                 Live Demo
               </Link>
             </div>
@@ -125,7 +125,7 @@ export default function Projects() {
                   <span>View on GitHub</span>
                 </button>
               </Link>
-              <Link href="https://virtual-assistant-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
+              <Link href="https://virtual-assistant-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
                 Live Demo
               </Link>
             </div>
