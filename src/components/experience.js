@@ -5,7 +5,7 @@ const Experience = () => {
     <section id="experience" className="bg-black text-light-gray py-12">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
-        <h2 className=" text-blue-500 text-4xl font-bold mb-8">
+        <h2 className=" text-blue-500 text-2xl font-bold mb-8 text-center">
           Professional Experience
         </h2>
 

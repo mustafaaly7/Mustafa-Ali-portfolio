@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import { GithubOutlined } from '@ant-design/icons'  // Import GitHub icon from Ant Design
+import Link from 'next/link'
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-black text-light-gray">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-white mb-6 text-center">Projects</h2>
+        <h2 className="text-2xl font-bold text-white mb-6 text-center">Projects</h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Project 1 */}
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
             <Image
-              src="/images/project1.jpg"  // Replace with your image path in the public folder
+              src="/images/ecommerce.png"  // Replace with your image path in the public folder
               alt="Project 1"
               width={500}
               height={300}
@@ -22,18 +23,22 @@ export default function Projects() {
               A short description of the project, tools used, and what it accomplishes.
             </p>
             <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <button
-                href="https://github.com"
-                target="_blank"
+              <Link
+                href="https://github.com/mustafaaly7/Ecommerce-demo"
+                 target="_blank"
                 rel="noopener noreferrer"
+              >
+              <button
+               
                 className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2"
               >
                 <GithubOutlined /> {/* GitHub Icon */}
                 <span>View on GitHub</span>
               </button>
-              <a href="https://your-deployment-link.com" target="_blank" rel="noopener noreferrer" className="bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
+              </Link>
+              <Link href="https://ecommerce-demo-self.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
                 Live Demo
-              </a>
+              </Link>
             </div>
           </div>
 

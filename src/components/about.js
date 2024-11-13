@@ -8,7 +8,7 @@ export default function About() {
                     <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                         <h3 className="text-xl font-semibold text-white mb-3">Introduction</h3>
                         <p className="text-gray-400">
-                            I&apos;m Muhammad Mustafa Ali&#44; a web developer with a passion for building clean&#44; functional&#44; and user-friendly websites.
+                          <span className="font-semibold text-xl">  I&apos;m Muhammad Mustafa Ali&#44;</span> a web developer with a passion for building clean&#44; functional&#44; and user-friendly websites.
                             I specialize in front-end development using technologies like React&#44; Next.js&#44; and Tailwind CSS&#44; and I have a strong background in working with Firebase and MongoDB.
                         </p>
                     </div>
@@ -28,13 +28,17 @@ export default function About() {
                 <div className="bg-gray-800 p-6 rounded-lg shadow-lg mt-8">
                     <h3 className="text-xl font-semibold text-white mb-3">Education & Certifications</h3>
                     <p className="text-gray-400">
-                        Bachelor&apos;s Degree in Computer Science - XYZ University (2020)
+                        Bachelor&apos;s Degree in Computer Science - Federal Urdu University (2022 - Present)
                     </p>
                     <p className="text-gray-400 mt-4">
-                        Certifications:
+                       <span className="text-xl font-semibold text-white mb-3"> Certifications:</span>
                         <ul className="list-disc pl-5">
-                            <li>React Developer Certification</li>
-                            <li>JavaScript Advanced Course</li>
+                            <li>
+                        Javascript Essential  - Cisco  (October-2024)
+                    </li>
+                            <li>
+                            web and mobile app development - Saylani Mass IT Training Center (2023 - 2024)
+                    </li>
                         </ul>
                     </p>
                 </div>

@@ -36,7 +36,7 @@ export default function Header() {
         {/* Links for Large Screens */}
         <ul className="hidden lg:flex space-x-6">
           <li>
-            <Link href="#hero" className="text-gray-400 hover:text-white">
+            <Link href="#about" className="text-gray-400 hover:text-white">
               About
             </Link>
           </li>
@@ -46,7 +46,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="#project" className="text-gray-400 hover:text-white">
+            <Link href="#projects" className="text-gray-400 hover:text-white">
               Projects
             </Link>
           </li>
