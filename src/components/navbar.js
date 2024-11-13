@@ -46,7 +46,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="#projects" className="text-gray-400 hover:text-white">
+            <Link href="#project" className="text-gray-400 hover:text-white">
               Projects
             </Link>
           </li>
