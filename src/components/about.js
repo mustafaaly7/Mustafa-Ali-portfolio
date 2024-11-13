@@ -2,7 +2,7 @@ export default function About() {
     return (
         <section id="about" className="py-20 bg-black text-light-gray">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold text-white mb-6 text-center">About Me</h2>
+                <h2 className="text-3xl font-bold text-white mb-6 ">About Me</h2>
 
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
