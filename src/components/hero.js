@@ -11,7 +11,7 @@ export default function Hero() {
                     A Passionate Web Developer
                 </h2>
                 <p className="text-gray-400 mt-6 text-lg md:text-xl leading-relaxed">
-                    I specialize in building high-quality web applications using HTML, CSS, JavaScript, Tailwind CSS, Firebase, MongoDB, Next.js, React.js, and Bootstrap.
+                    I specialize in building high-quality web applications using HTML&rsquo; CSS&rsquo; JavaScript&rsquo; Tailwind CSS&rsquo; Firebase&rsquo; MongoDB&rsquo; Next.js&rsquo; React.js&rsquo; and Bootstrap.
                 </p>
                 <div className="mt-8">
                     <a href="#contact" className="px-8 py-3 text-lg font-medium bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition">
