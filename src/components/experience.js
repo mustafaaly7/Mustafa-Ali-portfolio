@@ -5,7 +5,7 @@ const Experience = () => {
     <section id="experience" className="bg-black text-light-gray py-12">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
-        <h2 className=" text-blue-500 text-2xl font-bold mb-8 ">
+        <h2 className=" text-blue-500 text-4xl font-bold mb-8 ">
           Professional Experience
         </h2>
 
@@ -23,10 +23,10 @@ const Experience = () => {
           </div>
           {/* Role and Details */}
           <div>
-            <h3 className="text-gray-300 text-2xl font-semibold">
+            <h3 className="text-white text-2xl font-semibold">
               Frontend Intern
             </h3>
-            <p className="text-gray-400 italic">Code Alpha | 15 oct - Present</p>
+            <p className="text-gray-200 italic">Code Alpha | 15 oct - Present</p>
             <ul className="list-disc list-inside mt-3 space-y-2 text-gray-300">
               <li>Developed responsive web applications using React and Next.js.</li>
               <li>Buildin project using Mongodb and Firebase .</li>
