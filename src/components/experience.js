@@ -6,7 +6,7 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <h2 className=" text-blue-500 text-4xl font-bold mb-8 ">
-          Professional Experience
+          Experience
         </h2>
 
         {/* Experience Entry */}

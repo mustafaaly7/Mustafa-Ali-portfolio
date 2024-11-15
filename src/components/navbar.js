@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,14 @@ export default function Header() {
 
   return (
     <header className="bg-black text-light-gray">
-      <nav className="flex justify-between px-6 py-4 items-center">
-        <div className="text-white font-bold text-xl">Mustafa Ali</div>
+      <nav className="flex justify-between px-6  items-center">
+        <div>
+          <Image 
+          src={"/images/logo.png"}
+          height={120}
+          width={180}
+          />
+        </div>
         
         {/* Hamburger Icon */}
         <button
