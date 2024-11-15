@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="bg-black text-light-gray">
       <nav className="flex justify-between px-6 py-4 items-center">
-        <div className="text-white font-bold text-xl">MyLogo</div>
+        <div className="text-white font-bold text-xl">Mustafa Ali</div>
         
         {/* Hamburger Icon */}
         <button

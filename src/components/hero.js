@@ -1,12 +1,22 @@
+"use client"
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function Hero() {
     return (
         <section className="flex flex-col items-center justify-center  bg-gradient-to-b from-black to-gray-900 text-white px-6">
             <div className="text-center max-w-3xl my-5">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-500 leading-tight">
+                <motion.h1  initial={{ scale: 1.1 }} animate={{ scale: [1.1, 0.95, 1.1] }} // Loop the scale animation
+      transition={{
+        duration: 2, // duration for one cycle of the animation
+        repeat: Infinity, // This will make the animation loop indefinitely
+        repeatType: 'loop', // You can also use 'reverse' if you want it to reverse direction
+        ease: 'easeInOut' // Add easing to make the animation smooth
+      }} className={" text-2xl  md:text-5xl lg:text-6xl font-bold text-blue-500 leading-tight"} >
+                {/* <h1 className={" text-4xl md:text-5xl lg:text-6xl font-bold text-blue-500 leading-tight"}> */}
                     Hi&#44; I&apos;m Muhammad Mustafa Ali
-                </h1>
+                {/* </h1> */}
+                </motion.h1>
                 <h2 className="text-xl md:text-2xl lg:text-3xl mt-4 text-gray-300 font-medium">
                     A Passionate Web Developer
                 </h2>
@@ -29,6 +39,6 @@ export default function Hero() {
                     priority
                 />
             </div>
-        </section>
+        </section >
     );
 }

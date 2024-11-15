@@ -34,7 +34,7 @@ export default function About() {
                         <span className="text-xl font-semibold text-white mb-3"> Certifications:</span>
                         <ul className="list-disc pl-5">
                             <li>
-                                Javascript Essential  - Cisco  (October-2024)
+                                Javascript Essential  - Cisco  (October2024)
                             </li>
                             <li>
                                 web and mobile app development - Saylani Mass IT Training Center (2023 - 2024)
