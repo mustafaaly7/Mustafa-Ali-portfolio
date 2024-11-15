@@ -25,7 +25,7 @@ export default function Skills() {
         <section id="skills" className="py-20 bg-black text-light-gray">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col gap-8">
-                <h2 className="text-4xl font-bold  mb-6 font-sans text-blue-400 ">Skills</h2>
+                <h2 className="text-4xl font-bold  mb-6 font-sans text-blue-500 ">Skills</h2>
                 <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-y-8 gap-x-4 text-center">
                     {/* Main Skills */}
                     <SkillCard Icon={FaHtml5} label="HTML" />
