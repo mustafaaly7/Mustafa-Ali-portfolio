@@ -49,25 +49,25 @@ export default function Projects() {
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
             <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
               <Image
-                src="/images/blog-app.png"
-                alt="Blog App"
+                src="/images/ebook.png"
+                alt="Ebook-Store"
                 layout="fill"
                 objectFit="contain"
                 className="rounded-lg"
               />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Blog App</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">Ebook Store</h3>
             <p className="text-gray-400 mb-4">
-              Blog App using HTML&#44; CSS&#44; Firebase&#44; JavaScript. Full responsive with public and private routes.
+              Ebook App using MongoDb&#44; ExpressJS&#44; ReactJS&#44; NodeJS. Full responsive with public and private routes. Admin Panel&#44; Authorization &#44; Order Tracking etc.
             </p>
             <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link href="https://github.com/mustafaaly7/17-aug-2024-blogweb" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/mustafaaly7/Mern-Ecommerce-Frontend" target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
                   <GithubOutlined />
                   <span>View on GitHub</span>
                 </button>
               </Link>
-              <Link href="https://blogweb-app-mauve.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://mern-ecommerce-frontend-murex.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <button className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
                   Live Demo
                 </button>

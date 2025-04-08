@@ -8,8 +8,8 @@ export default function About() {
                     <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                         <h3 className="text-xl font-semibold text-white mb-3">Introduction</h3>
                         <p className="text-gray-400">
-                            <span className="font-semibold text-xl">  I&apos;m Muhammad Mustafa Ali&#44;</span> a web developer with a passion for building clean&#44; functional&#44; and user-friendly websites.
-                            I specialize in front-end development using technologies like React&#44; Next.js&#44; and Tailwind CSS&#44; and I have a strong background in working with Firebase and MongoDB.
+                            <span className="font-semibold text-xl">  I&apos;m Muhammad Mustafa Ali&#44;</span> a Web Developer with a passion for building clean&#44; functional&#44; and user-friendly websites.
+                            I specialize in Full-Stack development using technologies like React&#44; Next.js&#44; and Tailwind CSS&#44; NodeJs&#44; Express Js and I have a strong background in working with Firebase and MongoDB.
                         </p>
                     </div>
 

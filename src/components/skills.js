@@ -18,6 +18,10 @@ import { AiOutlineTeam } from "react-icons/ai";
 import { FaPeopleCarry } from "react-icons/fa";
 import { FaUserClock } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import { SiNestjs } from "react-icons/si";
+import { SiVite } from "react-icons/si";
+import { FaAngular } from "react-icons/fa";
 
 
 export default function Skills() {
@@ -31,7 +35,7 @@ export default function Skills() {
                     <SkillCard Icon={FaHtml5} label="HTML" />
                     <SkillCard Icon={FaCss3} label="CSS" />
                     <SkillCard Icon={IoLogoJavascript} label="JavaScript" />
-                    <SkillCard Icon={FaReact} label="React.js" />
+                    <SkillCard Icon={FaReact} label="ReactJs" />
                     <SkillCard Icon={SiNextdotjs} label="Next.js" />
                     <SkillCard Icon={SiMongodb} label="MongoDB" />
                     <SkillCard Icon={IoLogoFirebase} label="Firebase" />
@@ -40,14 +44,13 @@ export default function Skills() {
                     <SkillCard Icon={FaBootstrap} label="Bootstrap" />
                     <SkillCard Icon={SiAseprite} label="Aseprite" />
                     <SkillCard Icon={SiPostman} label="Postman" />
-                    <SkillCard Icon={SiExpress} label="Express Js" />
-                    <SkillCard Icon={IoLogoNodejs} label="Node Js" />
-                    <SkillCard Icon={SiPinterest} label="Pinterest" />
+                    <SkillCard Icon={SiExpress} label="ExpressJs" />
+                    <SkillCard Icon={IoLogoNodejs} label="NodeJs" />
+                    <SkillCard Icon={SiTypescript} label="Typescript" />
+                    <SkillCard Icon={SiNestjs} label="NestJs" />
+                    <SkillCard Icon={SiVite} label="Vite" />
+                    <SkillCard Icon={FaAngular} label="AngularJs" />
 
-                    {/* Soft Skills */}
-                    <SkillCard Icon={FaPeopleCarry} label="Teamwork" />
-                    <SkillCard Icon={AiOutlineTeam} label="Leadership" />
-                    <SkillCard Icon={FaUserClock} label="Quick Learner" />
                 </div>
                 </div>
             </div>
