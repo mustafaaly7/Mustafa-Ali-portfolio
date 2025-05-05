@@ -2,6 +2,7 @@ import About from "@/components/about";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Footer from "@/components/footer";
+import GithubContributions from "@/components/githubContribution";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Projects from "@/components/project";
@@ -16,6 +17,7 @@ export default function Home() {
 <Skills />
 <Experience />
 <Projects />
+<GithubContributions />
 <Contact />
 <About />
 <Footer />

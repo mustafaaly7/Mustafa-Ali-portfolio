@@ -18,7 +18,7 @@ export default function Hero() {
                     {/* </h1> */}
                 </motion.h1>
                 <h2 className="text-xl md:text-2xl lg:text-3xl mt-4 text-gray-300 font-medium">
-                    A Passionate Web Developer
+                Web | MERN Stack Developer
                 </h2>
                 <p className="text-gray-400 mt-6 text-lg md:text-xl leading-relaxed">
                     I specialize in building high-quality web applications using MongoDB&#44; ExpressJS&#44; ReactJS&#44; NodeJS CSS&#44; Firebase&#44; MongoDB&#44; Next.js&#44; Tailwind CSS&#44; and Bootstrap.
