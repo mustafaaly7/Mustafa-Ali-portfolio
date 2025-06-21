@@ -9,7 +9,7 @@ export default function About() {
                         <h3 className="text-xl font-semibold text-white mb-3">Introduction</h3>
                         <p className="text-gray-400">
                             <span className="font-semibold text-xl">  I&apos;m Muhammad Mustafa Ali&#44;</span> a Web Developer with a passion for building clean&#44; functional&#44; and user-friendly websites.
-                            I specialize in Full-Stack development using technologies like React&#44; Next.js&#44; and Tailwind CSS&#44; NodeJs&#44; Express Js and I have a strong background in working with Firebase and MongoDB.
+                            I specialize in Full-Stack development using technologies like React&#44; Next.js&#44; and Tailwind CSS&#44; NodeJs&#44; Express Js&#44; MongoDb&#44; Postgresql&#44; Vercel&#44; Github &#38; Render
                         </p>
                     </div>
 
@@ -34,10 +34,10 @@ export default function About() {
                         <span className="text-xl font-semibold text-white mb-3"> Certifications:</span>
                         <ul className="list-disc pl-5">
                             <li>
-                                Javascript Essential  - Cisco  (October2024)
+                                Javascript Essential I  - Cisco  (October2024)
                             </li>
                             <li>
-                                web and mobile app development - Saylani Mass IT Training Center (2023 - 2024)
+                                Web and Mobile App Development - Saylani Mass IT Training Center (2023 - 2024)
                             </li>
                         </ul>
                     </p>

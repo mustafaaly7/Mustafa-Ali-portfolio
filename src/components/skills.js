@@ -15,7 +15,7 @@ import { IoLogoNodejs } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { SiVite } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
+import { SiPostgresql  } from "react-icons/si";
 import { SiCanva } from "react-icons/si";
 
 
@@ -43,7 +43,7 @@ export default function Skills() {
                     <SkillCard Icon={SiPostman} label="Postman" />
                     <SkillCard Icon={SiTypescript} label="Typescript" />
                     <SkillCard Icon={SiVite} label="Vite" />
-                    <SkillCard Icon={VscVscode} label="VsCode" />
+                    <SkillCard Icon={SiPostgresql} label="Postgresql" />
                     <SkillCard Icon={SiCanva} label="Canva" />
 
 

@@ -79,25 +79,25 @@ export default function Projects() {
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
             <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
               <Image
-                src="/images/weatherApp.png"
+                src="/images/chatApp.png"
                 alt="Project 3"
                 layout="fill"
                 objectFit="contain"
                 className="rounded-lg"
               />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Weather App</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">Chat App</h3>
             <p className="text-gray-400 mb-4">
-            Weather App using Reactjs&#44; Firebase&#44; Tailwind Css&#44; One Weather API
+            Chat App using MERN Stack, DaisyUI, Socket.io & Deployed On Render & Vercel.
             </p>
             <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link href="https://github.com/mustafaaly7/Weather-App-React-js" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/mustafaaly7/Chat-App" target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
                   <GithubOutlined />
                   <span>View on GitHub</span>
                 </button>
               </Link>
-              <Link href="https://weather-app-react-js-inky.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
+              <Link href="https://chatty-black-omega.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
                 Live Demo
               </Link>
             </div>

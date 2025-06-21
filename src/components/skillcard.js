@@ -20,7 +20,7 @@ export default function SkillCard({ Icon, label }) {
         QuickLearner: "text-purple-500",
         Typescript: "text-blue-600 bg-white",
         Vite: "text-indigo-400",
-        VsCode:"text-[#007ACC]",
+        Postgresql:"text-[#ffff]",
         Canva: "text-[#00C4CC]",
       };
     
