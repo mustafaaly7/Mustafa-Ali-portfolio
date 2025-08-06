@@ -28,15 +28,35 @@ export default function Hero() {
                 >
                     Hi, I&apos;m Muhammad Mustafa Ali
                 </motion.h1>
-                <h2 className="text-xl md:text-2xl lg:text-3xl mt-4 text-gray-300 font-medium">
+
+                <motion.h2
+                    className="text-xl md:text-2xl lg:text-3xl mt-4 text-gray-300 font-medium"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                >
                     Web | MERN Stack Developer
-                </h2>
-                <p className="text-gray-400 mt-6 text-lg md:text-xl leading-relaxed">
-                    I specialize in building high-quality web applications using MongoDB, ExpressJS, ReactJS, NodeJS, CSS, Firebase, MongoDB, Next.js, Tailwind CSS, and Bootstrap.
-                </p>
+                </motion.h2>
+
+                <motion.p
+                    className="text-gray-400 mt-6 text-lg md:text-xl leading-relaxed"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                >
+                    I specialize in building high-quality web applications using MongoDB, ExpressJS, ReactJS, NodeJS,  Firebase, MongoDB, NextJS and NestJS.
+                </motion.p>
 
                 {/* Buttons */}
-                <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center">
+                <motion.div
+                    className="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                >
                     <a href="#contact" className="px-8 py-3 text-lg font-medium bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition">
                         Contact Me
                     </a>
@@ -46,11 +66,17 @@ export default function Hero() {
                     >
                         Download CV
                     </button>
-                </div>
+                </motion.div>
             </div>
 
             {/* Profile Image */}
-            <div className="mt-10 relative w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 mb-10">
+            <motion.div
+                className="mt-10 relative w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 mb-10"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+            >
                 <Image
                     src={"/images/profile.jpg"}
                     alt="Muhammad Mustafa Ali"
@@ -59,7 +85,7 @@ export default function Hero() {
                     className="rounded-full border-4 border-blue-500"
                     priority
                 />
-            </div>
+            </motion.div>
         </section>
     );
 }

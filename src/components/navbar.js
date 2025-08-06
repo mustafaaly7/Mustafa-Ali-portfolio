@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,14 +11,19 @@ export default function Header() {
 
   return (
     <header className="bg-black text-light-gray">
-      <nav className="flex justify-between px-6  items-center">
-        <div>
+      <nav className="flex justify-between px-6 items-center">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <Image 
-          src={"/images/logo.png"}
-          height={120}
-          width={180}
+            src={"/images/logo.png"}
+            height={120}
+            width={180}
+            alt="Logo"
           />
-        </div>
+        </motion.div>
         
         {/* Hamburger Icon */}
         <button
@@ -41,7 +47,12 @@ export default function Header() {
         </button>
 
         {/* Links for Large Screens */}
-        <ul className="hidden lg:flex space-x-6">
+        <motion.ul
+          className="hidden lg:flex space-x-6"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
           <li>
             <Link href="#about" className="text-gray-400 hover:text-white">
               About
@@ -62,12 +73,17 @@ export default function Header() {
               Contact
             </Link>
           </li>
-        </ul>
+        </motion.ul>
       </nav>
 
       {/* Mobile Menu (Visible Only When Open) */}
       {isOpen && (
-        <ul className="lg:hidden flex flex-col space-y-4 mt-2 px-6 pb-4 bg-black text-gray-400">
+        <motion.ul
+          className="lg:hidden flex flex-col space-y-4 mt-2 px-6 pb-4 bg-black text-gray-400"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           <li>
             <Link href="#about" className="hover:text-white" onClick={() => setIsOpen(false)}>
               About
@@ -88,9 +104,8 @@ export default function Header() {
               Contact
             </Link>
           </li>
-        </ul>
+        </motion.ul>
       )}
     </header>
   );
 }
-

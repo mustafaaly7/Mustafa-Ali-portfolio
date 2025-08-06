@@ -1,22 +1,37 @@
+"use client";
 import Image from 'next/image'
-import { GithubOutlined } from '@ant-design/icons'  // Import GitHub icon from Ant Design
+import { GithubOutlined } from '@ant-design/icons'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-black text-light-gray">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-white mb-6 ">Projects</h2>
+        <motion.h2
+          className="text-4xl font-bold text-white mb-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Projects
+        </motion.h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Project 1 */}
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <motion.div
+            className="bg-gray-800 p-6 rounded-lg shadow-lg"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
               <Image
-                src="/images/ecommerce.png"  // Replace with your image path in the public folder
+                src="/images/ecommerce.png"
                 alt="Ecommerce Website"
-                layout="fill"  // Ensures the image fills the container
-                objectFit="contain"  // Display the whole image without cropping
+                layout="fill"
+                objectFit="contain"
                 className="rounded-lg"
               />
             </div>
@@ -25,11 +40,7 @@ export default function Projects() {
               Ecommerce website using Reactjs&#44; Firebase&#44; Tailwind Css&#44; DummyJson API
             </p>
             <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link
-                href="https://github.com/mustafaaly7/Ecommerce-demo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://github.com/mustafaaly7/Ecommerce-demo" target="_blank" rel="noopener noreferrer">
                 <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
                   <GithubOutlined />
                   <span>View on GitHub</span>
@@ -41,12 +52,16 @@ export default function Projects() {
                 </button>
               </Link>
             </div>
-          </div>
-
-          {/* Additional projects... */}
+          </motion.div>
 
           {/* Project 2 */}
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <motion.div
+            className="bg-gray-800 p-6 rounded-lg shadow-lg"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
               <Image
                 src="/images/ebook.png"
@@ -73,10 +88,16 @@ export default function Projects() {
                 </button>
               </Link>
             </div>
-          </div>
+          </motion.div>
 
           {/* Project 3 */}
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <motion.div
+            className="bg-gray-800 p-6 rounded-lg shadow-lg"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
               <Image
                 src="/images/chatApp.png"
@@ -88,7 +109,7 @@ export default function Projects() {
             </div>
             <h3 className="text-xl font-semibold text-white mb-3">Chat App</h3>
             <p className="text-gray-400 mb-4">
-            Chat App using MERN Stack, DaisyUI, Socket.io & Deployed On Render & Vercel.
+              Chat App using MERN Stack, DaisyUI, Socket.io & Deployed On Render & Vercel.
             </p>
             <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
               <Link href="https://github.com/mustafaaly7/Chat-App" target="_blank" rel="noopener noreferrer">
@@ -101,10 +122,16 @@ export default function Projects() {
                 Live Demo
               </Link>
             </div>
-          </div>
+          </motion.div>
 
           {/* Project 4 */}
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <motion.div
+            className="bg-gray-800 p-6 rounded-lg shadow-lg"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
               <Image
                 src="/images/va.png"
@@ -129,7 +156,7 @@ export default function Projects() {
                 Live Demo
               </Link>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
