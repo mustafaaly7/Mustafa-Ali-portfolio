@@ -31,7 +31,7 @@ export default function Footer() {
                     <Link href="https://www.linkedin.com/in/mustafa-ali-74a769222/" className="text-2xl  text-gray-400 hover:text-white ">
                         <LinkedinFilled className="text-[#0077B5] bg-white" /> LinkedIn
                     </Link>
-                    <Link href="mailto:ma7332267@gmail.com" className="text-2xl text-gray-400 hover:text-white ">
+                    <Link href="mailto:mustafaaaly27@gmail.com" className="text-2xl text-gray-400 hover:text-white ">
                         <MailOutlined className="text-red-500" /> Gmail
                     </Link>
                 </motion.div>
