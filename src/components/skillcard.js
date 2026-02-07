@@ -21,7 +21,7 @@ export default function SkillCard({ Icon, label }) {
         Typescript: "text-blue-600 bg-white",
         Vite: "text-indigo-400",
         Postgresql:"text-[#ffff]",
-        Canva: "text-[#00C4CC]",
+        Socket: "text-[#ffff]",
       };
     
 

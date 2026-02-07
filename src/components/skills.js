@@ -18,7 +18,9 @@ import { FaGithub } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { SiVite } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
-import { SiCanva } from "react-icons/si";
+// import { SiCanva } from "react-icons/si";
+import { SiSocketdotio } from "react-icons/si";
+
 
 export default function Skills() {
     const skills = [
@@ -39,7 +41,7 @@ export default function Skills() {
         { Icon: SiTypescript, label: "Typescript" },
         { Icon: SiVite, label: "Vite" },
         { Icon: SiPostgresql, label: "Postgresql" },
-        { Icon: SiCanva, label: "Canva" },
+        { Icon: SiSocketdotio, label: "Socket" },
     ];
 
     return (
