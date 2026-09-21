@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,101 +10,48 @@ export default function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-black text-light-gray">
-      <nav className="flex justify-between px-6 items-center">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Image 
-            src={"/images/logo.png"}
-            height={120}
-            width={180}
-            alt="Logo"
-          />
-        </motion.div>
-        
-        {/* Hamburger Icon */}
+    <header className="sticky top-0 z-50 border-b border-[#1F2937]/80 bg-black/90 text-[#E2E8F0] backdrop-blur-xl">
+      <nav className="shell flex min-h-[76px] items-center justify-between">
+        <Link href="#top" aria-label="Muhammad Mustafa Ali home" className="block">
+          <Image src="/images/logo.png" width={150} height={52} alt="Muhammad Mustafa Ali" className="h-auto w-[120px] sm:w-[150px]" priority />
+        </Link>
+
+        <div className="hidden items-center gap-8 lg:flex">
+          {[
+            ["About", "about"],
+            ["Work", "projects"],
+            ["Experience", "experience"],
+            ["Contact", "contact"],
+          ].map(([label, id]) => (
+            <Link key={id} href={`#${id}`} className="font-mono text-xs uppercase tracking-[0.1em] text-[#8F9B8F] transition-colors hover:text-[#22C55E]">
+              {label}
+            </Link>
+          ))}
+          <a href="/mustafa.pdf" download className="inline-flex items-center gap-2 border border-[#22C55E] px-4 py-2 font-mono text-xs uppercase tracking-[0.08em] text-[#22C55E] transition-colors hover:bg-[#22C55E] hover:text-black">
+            Resume <ArrowUpRight size={14} />
+          </a>
+        </div>
+
         <button
           onClick={toggleMenu}
-          className="lg:hidden text-white focus:outline-none"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          className="text-[#E2E8F0] lg:hidden"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-
-        {/* Links for Large Screens */}
-        <motion.ul
-          className="hidden lg:flex space-x-6"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          <li>
-            <Link href="#about" className="text-gray-400 hover:text-white">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="#skills" className="text-gray-400 hover:text-white">
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link href="#projects" className="text-gray-400 hover:text-white">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="#contact" className="text-gray-400 hover:text-white">
-              Contact
-            </Link>
-          </li>
-        </motion.ul>
       </nav>
 
-      {/* Mobile Menu (Visible Only When Open) */}
       {isOpen && (
-        <motion.ul
-          className="lg:hidden flex flex-col space-y-4 mt-2 px-6 pb-4 bg-black text-gray-400"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <li>
-            <Link href="#about" className="hover:text-white" onClick={() => setIsOpen(false)}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="#skills" className="hover:text-white" onClick={() => setIsOpen(false)}>
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link href="#projects" className="hover:text-white" onClick={() => setIsOpen(false)}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="#contact" className="hover:text-white" onClick={() => setIsOpen(false)}>
-              Contact
-            </Link>
-          </li>
-        </motion.ul>
+        <div className="shell border-t border-[#1F2937] py-5 lg:hidden">
+          <div className="flex flex-col gap-5">
+            {[["About", "about"], ["Work", "projects"], ["Experience", "experience"], ["Contact", "contact"]].map(([label, id]) => (
+              <Link key={id} href={`#${id}`} onClick={() => setIsOpen(false)} className="font-display text-2xl text-[#E2E8F0]">
+                {label}
+              </Link>
+            ))}
+            <a href="/mustafa.pdf" download className="font-mono text-xs uppercase tracking-[0.1em] text-[#22C55E]">Download resume <ArrowUpRight className="inline" size={14} /></a>
+          </div>
+        </div>
       )}
     </header>
   );

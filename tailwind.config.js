@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
   	extend: {
+			fontFamily: {
+				display: ['var(--font-display)', 'sans-serif'],
+				body: ['var(--font-manrope)', 'sans-serif'],
+				mono: ['var(--font-mono)', 'monospace'],
+			},
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'

@@ -11,16 +11,18 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-     <Navbar />
-<Hero />
-<Skills />
-<Experience />
-<Projects />
-<GithubContributions />
-<Contact />
-<About />
-<Footer />
-   </div>
+    <div className="overflow-hidden bg-black">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <GithubContributions />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }

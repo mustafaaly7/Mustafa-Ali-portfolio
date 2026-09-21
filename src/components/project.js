@@ -1,165 +1,20 @@
 "use client";
-import Image from 'next/image'
-import { GithubOutlined } from '@ant-design/icons'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Github } from "lucide-react";
+
+const projects = [
+  { title: "Ebook Store", image: "/images/ebook.png", description: "A full-stack commerce platform with public and private routes, admin controls, authorization, and order tracking.", stack: ["MongoDB", "Express", "React", "Node"], github: "https://github.com/mustafaaly7/Mern-Ecommerce-Frontend", demo: "https://mern-ecommerce-frontend-murex.vercel.app/", featured: true },
+  { title: "Chat App", image: "/images/chatApp.png", description: "Real-time messaging built with the MERN stack and Socket.io, deployed across Render and Vercel.", stack: ["MERN", "Socket.io", "DaisyUI"], github: "https://github.com/mustafaaly7/Chat-App", demo: "https://chatty-black-omega.vercel.app/" },
+  { title: "Ecommerce Website", image: "/images/ecommerce.png", description: "A responsive storefront experience powered by React, Firebase, Tailwind CSS, and the DummyJSON API.", stack: ["React", "Firebase", "Tailwind"], github: "https://github.com/mustafaaly7/Ecommerce-demo", demo: "https://ecommerce-demo-self.vercel.app/" },
+  { title: "Virtual Assistant", image: "/images/va.png", description: "A browser-based voice assistant using JavaScript and speech synthesis to understand and respond to commands.", stack: ["HTML", "CSS", "JavaScript"], github: "https://github.com/mustafaaly7/virtual-assistant-on-js", demo: "https://virtual-assistant-two.vercel.app/" },
+];
+
+function ProjectCard({ project, index }) {
+  return <motion.article initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }} className={`${project.featured ? "lg:col-span-2" : ""} group border border-[#1F2937] bg-[#0B0F0B] transition-colors hover:border-[#22C55E]/60`}><div className={`${project.featured ? "md:grid-cols-[1.15fr_0.85fr]" : ""} grid h-full`}><div className="relative min-h-[240px] overflow-hidden border-b border-[#1F2937] bg-[#141A14] md:border-b-0 md:border-r"><Image src={project.image} alt={project.title} fill className="object-contain p-5 transition duration-700 group-hover:scale-105" /><span className="absolute left-4 top-4 bg-[#000000]/80 px-2 py-1 font-mono text-[10px] text-[#22C55E]">0{index + 1}</span></div><div className="flex flex-col justify-between p-6 lg:p-8"><div><div className="mb-5 flex items-start justify-between gap-4"><h3 className="font-display text-2xl font-semibold tracking-[-0.04em] text-[#E2E8F0]">{project.title}</h3><ArrowUpRight size={20} className="shrink-0 text-[#22C55E] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" /></div><p className="text-sm leading-7 text-[#8F9B8F]">{project.description}</p><div className="mt-6 flex flex-wrap gap-2">{project.stack.map((item) => <span key={item} className="bg-[#141A14] px-2 py-1 font-mono text-[10px] uppercase tracking-[0.06em] text-[#8F9B8F]">{item}</span>)}</div></div><div className="mt-8 flex items-center gap-5 border-t border-[#1F2937] pt-5 font-mono text-[10px] uppercase tracking-[0.08em]"><a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-[#22C55E]">Live demo <ArrowUpRight className="inline" size={13} /></a><a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[#8F9B8F] transition-colors hover:text-[#E2E8F0]"><Github className="mr-1 inline" size={13} /> Source</a></div></div></div></motion.article>;
+}
 
 export default function Projects() {
-  return (
-    <section id="projects" className="py-20 bg-black text-light-gray">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          className="text-4xl font-bold text-white mb-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Projects
-        </motion.h2>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          {/* Project 1 */}
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
-              <Image
-                src="/images/ecommerce.png"
-                alt="Ecommerce Website"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Ecommerce Website</h3>
-            <p className="text-gray-400 mb-4">
-              Ecommerce website using Reactjs&#44; Firebase&#44; Tailwind Css&#44; DummyJson API
-            </p>
-            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link href="https://github.com/mustafaaly7/Ecommerce-demo" target="_blank" rel="noopener noreferrer">
-                <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
-                  <GithubOutlined />
-                  <span>View on GitHub</span>
-                </button>
-              </Link>
-              <Link href="https://ecommerce-demo-self.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <button className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
-                  Live Demo
-                </button>
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Project 2 */}
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
-              <Image
-                src="/images/ebook.png"
-                alt="Ebook-Store"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Ebook Store</h3>
-            <p className="text-gray-400 mb-4">
-              Ebook App using MongoDb&#44; ExpressJS&#44; ReactJS&#44; NodeJS. Full responsive with public and private routes. Admin Panel&#44; Authorization &#44; Order Tracking etc.
-            </p>
-            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link href="https://github.com/mustafaaly7/Mern-Ecommerce-Frontend" target="_blank" rel="noopener noreferrer">
-                <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
-                  <GithubOutlined />
-                  <span>View on GitHub</span>
-                </button>
-              </Link>
-              <Link href="https://mern-ecommerce-frontend-murex.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <button className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
-                  Live Demo
-                </button>
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Project 3 */}
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
-              <Image
-                src="/images/chatApp.png"
-                alt="Project 3"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Chat App</h3>
-            <p className="text-gray-400 mb-4">
-              Chat App using MERN Stack, DaisyUI, Socket.io & Deployed On Render & Vercel.
-            </p>
-            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link href="https://github.com/mustafaaly7/Chat-App" target="_blank" rel="noopener noreferrer">
-                <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
-                  <GithubOutlined />
-                  <span>View on GitHub</span>
-                </button>
-              </Link>
-              <Link href="https://chatty-black-omega.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
-                Live Demo
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Project 4 */}
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg">
-              <Image
-                src="/images/va.png"
-                alt="Virtual Assistant"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Virtual Assitant</h3>
-            <p className="text-gray-400 mb-4">
-              Used Html&#44; css&#44; Javascript&#44; and Speech synthesis functions to recognize voice and act accordingly.
-            </p>
-            <div className="flex flex-col justify-around items-center sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link href="https://github.com/mustafaaly7/virtual-assistant-on-js" target="_blank" rel="noopener noreferrer">
-                <button className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-2">
-                  <GithubOutlined />
-                  <span>View on GitHub</span>
-                </button>
-              </Link>
-              <Link href="https://virtual-assistant-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-center bg-blue-400 text-black px-4 py-2 rounded-lg hover:bg-blue-300">
-                Live Demo
-              </Link>
-            </div>
-          </motion.div>
-
-        </div>
-      </div>
-    </section>
-  )
+  return <section id="projects" className="border-b border-[#1F2937] bg-black py-24 text-[#E2E8F0]"><div className="shell"><div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><span className="eyebrow">02 / selected work</span><h2 className="section-heading mt-5">Things I&apos;ve shipped.</h2></div><p className="max-w-xs text-sm leading-6 text-[#8F9B8F]">A selection of products, experiments, and systems built across the stack.</p></div><div className="grid gap-5 md:grid-cols-2">{projects.map((project, index) => <ProjectCard key={project.title} project={project} index={index} />)}</div></div></section>;
 }
